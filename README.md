@@ -231,4 +231,3 @@ commas, and two-space indentation. Shared editor settings live in `.editorconfig
 To run a compiled backend locally, use `npm run build` followed by `npm start`.
 To inspect a frontend build locally, use `npm run build` followed by `npm run preview`.
 The supplied Docker Compose setup runs development servers with source reloads.
-

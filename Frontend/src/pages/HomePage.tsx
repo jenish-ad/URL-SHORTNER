@@ -1,14 +1,20 @@
+﻿import { Link } from "@tanstack/react-router";
 import UrlForm from "../components/UrlForm";
 
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center mb-6">URL Shortener</h1>
+const HomePage = () => (
+  <main className="home-page">
+    <section className="shorten-stage" aria-labelledby="shorten-title">
+      <div className="shorten-panel" id="shorten">
+        <h1 id="shorten-title">Big URL? Little fix.</h1>
+        <p>Paste your long link below. We’ll take it from here.</p>
         <UrlForm />
       </div>
-    </div>
-  );
-};
+    </section>
+    <footer className="home-footer">
+      <span>Small links. Made for sharing.</span>
+      <Link to="/auth">Want to keep your links? Sign in ↗</Link>
+    </footer>
+  </main>
+);
 
 export default HomePage;

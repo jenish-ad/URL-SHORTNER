@@ -1,4 +1,4 @@
-import { useQueryClient } from "@tanstack/react-query";
+﻿import { useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
@@ -31,9 +31,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav aria-label="Main navigation" className="bg-white border border-b-black">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center min-h-16 gap-4">
-        <Link to="/" className="text-xl font-bold text-gray-800">
+    <nav aria-label="Main navigation" className="site-nav">
+      <div className="nav-inner">
+        <Link to="/" className="wordmark" aria-label="URL Shortener home">
           URL Shortener
         </Link>
         <div className="flex items-center gap-4">
@@ -53,8 +53,8 @@ export default function Navbar() {
               </button>
             </>
           ) : (
-            <Link to="/auth" className="bg-blue-500 text-white px-4 py-2 rounded-md">
-              Login
+            <Link to="/auth" className="nav-login">
+              Sign in ↗
             </Link>
           )}
         </div>
